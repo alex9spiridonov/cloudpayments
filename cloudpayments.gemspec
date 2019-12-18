@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "cloudpayments"
-  s.version = "0.3.0"
+  s.version = "0.3.1"
   s.date = "2019-11-19"
   s.summary = "Сloudpayments API wrapper"
   s.authors = ["Alexey Spiridonov"]

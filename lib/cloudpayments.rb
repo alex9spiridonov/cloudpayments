@@ -7,6 +7,7 @@ require_relative "cloudpayments/client/response/body"
 require_relative "cloudpayments/client/request/base"
 require_relative "cloudpayments/client/request/receipts/create"
 require_relative "cloudpayments/client/request/receipts/get_status"
+require_relative "cloudpayments/client/request/receipts/get"
 
 module Cloudpayments
   class << self
