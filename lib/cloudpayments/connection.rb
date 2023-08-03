@@ -15,9 +15,9 @@ module Cloudpayments
     end
 
     def connection
-      conn = Faraday.new(config.base_url)
-      conn.basic_auth(config.login, config.password)
-      conn
+      Faraday.new(config.base_url) do |conn|
+        conn.request :authorization, :basic, config.login, config.password
+      end
     end
 
     def config
