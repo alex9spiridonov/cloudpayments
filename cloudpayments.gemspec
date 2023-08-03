@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.authors = ["Alexey Spiridonov"]
   s.email = "alex9spiridonov@gmail.com"
   s.files = Dir["lib/**/*", "README.md"]
-  s.homepage = "https://rubygems.org/gems/cloudpayments"
+  s.homepage = "https://github.com/alex9spiridonov/cloudpayments"
   s.license = "MIT"
   s.add_runtime_dependency 'faraday', '~> 2.7.10'
 end
