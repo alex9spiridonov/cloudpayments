@@ -3,14 +3,15 @@ module Cloudpayments
     module Request
       module Receipts
         class Create < Cloudpayments::Client::Request::Base
-          attr_reader :params
+          attr_reader :params, :request_id
 
-          def initialize(params)
+          def initialize(params, request_id: SecureRandom.uuid)
             @params = params
+            @request_id = request_id
           end
 
           def call
-            post("kkt/receipt", params)
+            post("kkt/receipt", params, { "X-Request-ID" => request_id })
           end
         end
       end

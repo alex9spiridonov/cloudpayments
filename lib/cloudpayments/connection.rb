@@ -1,15 +1,16 @@
 module Cloudpayments
   module Connection
-    def post(path, data = {})
-      request(:post, path, data)
+    def post(path, data = {}, headers = {})
+      request(:post, path, data, headers)
     end
 
     private
 
-    def request(method, path, data)
+    def request(method, path, data, headers = {})
       connection.send(method) do |req|
         req.url path
         req.headers["Content-Type"] = "application/json"
+        req.headers.merge!(headers)
         req.body = data.to_json
       end
     end

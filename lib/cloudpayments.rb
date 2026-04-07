@@ -1,5 +1,6 @@
 require "faraday"
 require "json"
+require "securerandom"
 require_relative "cloudpayments/configuration"
 require_relative "cloudpayments/connection"
 require_relative "cloudpayments/client/response/base"

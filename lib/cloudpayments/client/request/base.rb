@@ -4,8 +4,8 @@ module Cloudpayments
       class Base
         include Cloudpayments::Connection
 
-        def self.call(*args, &block)
-          response = new(*args, &block).call
+        def self.call(*args, **kwargs, &block)
+          response = new(*args, **kwargs, &block).call
           Cloudpayments::Client::Response::Base.new(response)
         end
       end
